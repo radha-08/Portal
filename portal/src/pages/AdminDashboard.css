@@ -1,0 +1,313 @@
+/* AdminDashboard.css - Fully Responsive Modern Design */
+
+* {
+  box-sizing: border-box;
+}
+ 
+
+.admin-dashboard {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(https://wallpapers.com/images/featured/dark-5u7v1sbwoi6hdzsb.jpg);
+  min-height: 100vh;
+  color: #2d3748;
+}
+
+.admin-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.admin-header h1 {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  font-weight: 700;
+}
+
+.logout-btn {
+  align-self: center;
+  padding: 12px 32px;
+  background: #0a1337;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(229, 62, 62, 0.2);
+}
+
+.logout-btn:hover {
+  background: #4e247e;
+  transform: translateY(-2px);
+}
+
+/* Branches Grid */
+.branches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.branch-card {
+  background: #0a1337;
+  padding: 36px 20px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(10, 19, 55, 0.1);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  color: white;
+}
+
+.branch-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(10, 19, 55, 0.15);
+}
+
+.branch-card.active {
+  background: #0a1337;
+  color: white;
+  transform: scale(1.05);
+  border-color: #0a1337;
+  box-shadow: 0 24px 50px rgba(10, 19, 55, 0.3);
+}
+
+.branch-card h3 {
+  font-size: 1.6rem;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+
+.branch-card p {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 1rem;
+}
+
+/* Attendance Section */
+.attendance-section {
+  background: transparent;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(10, 19, 55, 0.1);
+}
+
+.attendance-section h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0 0 8px 0;
+}
+
+.current-date {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+}
+
+/* Export Section */
+.export-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: transparent;
+  border-radius: 12px;
+  border: 1px dashed #0a1337;
+  margin-bottom: 28px;
+}
+
+.date-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.date-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 140px;
+}
+
+.date-field label {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.date-field input {
+  padding: 12px;
+  border: 2px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.date-field input:focus {
+  outline: none;
+  border-color: #0a1337;
+  box-shadow: 0 0 0 3px rgba(10, 19, 55, 0.15);
+}
+
+.export-btn {
+  align-self: center;
+  padding: 14px 36px;
+  background: #0a1337;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(10, 19, 55, 0.25);
+}
+
+.export-btn:hover:not(:disabled) {
+  background: #060e2b;
+  transform: translateY(-3px);
+}
+
+.export-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.branch-attendance-table {
+  width: 100%;
+  min-width: 800px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.branch-attendance-table th {
+  background: #0a1337;
+  color: white;
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.branch-attendance-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: white;
+}
+
+.branch-attendance-table tr:hover {
+  color: #000;
+}
+
+.absent-row {
+  background: transparent !important;
+}
+
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-present { background: #c6f6d5; color: #22543d; }
+.status-absent { background: #fed7d7; color: #742a2a; }
+.status-late { background: #fef5cd; color: #7b5e11; }
+.status-half-day { background: #d6eaf8; color: #1e4d6d; }
+
+.view-full-btn {
+  padding: 8px 16px;
+  background: #0a1337;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.view-full-btn:hover {
+  background: #060e2b;
+  transform: scale(1.05);
+}
+
+.loading-msg, .no-data {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.1rem;
+  color: #718096;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .admin-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .export-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .date-inputs {
+    justify-content: flex-start;
+  }
+
+  .export-btn {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-dashboard {
+    padding: 16px;
+  }
+
+  .attendance-section {
+    padding: 20px;
+  }
+
+  .branch-card {
+    padding: 28px 16px;
+  }
+
+  .branch-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .export-btn {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .date-field {
+    width: 100%;
+  }
+
+  .branch-attendance-table th,
+  .branch-attendance-table td {
+    padding: 10px 8px;
+    font-size: 0.9rem;
+    color: white;
+  }
+}
